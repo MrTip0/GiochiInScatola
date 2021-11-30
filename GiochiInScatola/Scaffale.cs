@@ -21,7 +21,6 @@ namespace GiochiInScatola
             }
         }
 
-
         public Scaffale()
         {
             Giochi = new List<GiocoDaTavolo>();
@@ -34,6 +33,10 @@ namespace GiochiInScatola
 
         static public Scaffale DaFile(string FileName)
         {
+            if (!File.Exists(FileName))
+            {
+                throw new Exception("Il file non esiste");
+            }
             var lista = new List<GiocoDaTavolo>();
             lista.AddRange(JsonSerializer.Deserialize<GiocoDaTavolo[]>(File.ReadAllText(FileName)));
             return new Scaffale(lista);
