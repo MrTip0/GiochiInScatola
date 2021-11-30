@@ -31,11 +31,11 @@ namespace GiochiInScatola
         {
             this.lista = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btnAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuSalva = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEsporta = new System.Windows.Forms.ToolStripMenuItem();
-            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btnAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.datiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCerca = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCasuale = new System.Windows.Forms.ToolStripMenuItem();
@@ -64,6 +64,21 @@ namespace GiochiInScatola
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btnAbout});
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Text = "Info";
+            // 
+            // btnAbout
+            // 
+            this.btnAbout.Name = "btnAbout";
+            this.btnAbout.Size = new System.Drawing.Size(107, 22);
+            this.btnAbout.Text = "About";
+            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
+            // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -76,31 +91,16 @@ namespace GiochiInScatola
             // menuSalva
             // 
             this.menuSalva.Name = "menuSalva";
-            this.menuSalva.Size = new System.Drawing.Size(180, 22);
+            this.menuSalva.Size = new System.Drawing.Size(113, 22);
             this.menuSalva.Text = "Salva";
             this.menuSalva.Click += new System.EventHandler(this.menuSalva_Click);
             // 
             // menuEsporta
             // 
             this.menuEsporta.Name = "menuEsporta";
-            this.menuEsporta.Size = new System.Drawing.Size(180, 22);
+            this.menuEsporta.Size = new System.Drawing.Size(113, 22);
             this.menuEsporta.Text = "Esporta";
             this.menuEsporta.Click += new System.EventHandler(this.menuEsporta_Click);
-            // 
-            // infoToolStripMenuItem
-            // 
-            this.infoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btnAbout});
-            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
-            this.infoToolStripMenuItem.Text = "Info";
-            // 
-            // btnAbout
-            // 
-            this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(180, 22);
-            this.btnAbout.Text = "About";
-            this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // datiToolStripMenuItem
             // 
