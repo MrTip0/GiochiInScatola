@@ -2,14 +2,15 @@
 
 namespace GiochiInScatola
 {
-    class GiocoDaTavolo: Gioco
+    class GiocoDaTavolo : Gioco
     {
         private byte _comp;
 
         public byte Complessita
         {
             get { return _comp; }
-            set {
+            set
+            {
                 if (value <= 0 || value > 10)
                 {
                     throw new ArgumentException("La complessita deve essere compresa tra 1 e 10");
@@ -41,13 +42,18 @@ namespace GiochiInScatola
             }
         }
 
-        public GiocoDaTavolo(string Nome, decimal Prezzo, int Classificazione, byte Complessita, bool Squadre, string Categoria):
+        public GiocoDaTavolo(string Nome, decimal Prezzo, int Classificazione, byte Complessita, bool Squadre, string Categoria) :
             base(Nome, Prezzo, Classificazione)
         {
             this.Categoria = Categoria;
             this.Classificazione = Classificazione;
             this.Complessita = Complessita;
         }
-
+        public GiocoDaTavolo() : base(" ", 1, 0)
+        {
+            Squadre = false;
+            Categoria = " ";
+            Complessita = 1;
+        }
     }
 }

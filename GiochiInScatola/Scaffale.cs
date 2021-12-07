@@ -1,11 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Text.Json.Serialization;
-using System.Text.Json;
 using System.IO;
+using System.Text.Json;
 
 namespace GiochiInScatola
 {
@@ -16,7 +12,8 @@ namespace GiochiInScatola
         public List<GiocoDaTavolo> Giochi
         {
             get { return _giochi; }
-            private set {
+            private set
+            {
                 _giochi = value;
             }
         }
@@ -70,6 +67,7 @@ namespace GiochiInScatola
                     {
                         return j;
                     }
+                    i++;
                 }
             }
             return -1;
@@ -105,6 +103,10 @@ namespace GiochiInScatola
             {
                 Giochi.Remove(Giochi[index]);
             }
+        }
+        public void Rimuovi(GiocoDaTavolo gioco)
+        {
+            Giochi.Remove(gioco);
         }
     }
 }

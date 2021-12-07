@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GiochiInScatola
 {
@@ -57,6 +53,10 @@ namespace GiochiInScatola
             this.Nome = Nome;
             this.Prezzo = Prezzo;
             this.Classificazione = Classificazione;
+        }
+        public override string ToString()
+        {
+            return Nome;
         }
     }
 }

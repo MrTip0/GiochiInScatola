@@ -34,25 +34,27 @@ namespace GiochiInScatola
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.btnAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuSalva = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuImporta = new System.Windows.Forms.ToolStripMenuItem();
             this.menuEsporta = new System.Windows.Forms.ToolStripMenuItem();
             this.datiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCerca = new System.Windows.Forms.ToolStripMenuItem();
             this.menuCasuale = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.tbTitolo = new System.Windows.Forms.TextBox();
-            this.textPrezzo = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.numericRating = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.numericComplex = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
-            this.textCategoria = new System.Windows.Forms.TextBox();
             this.checkSquadre = new System.Windows.Forms.CheckBox();
+            this.textCategoria = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.numericComplex = new System.Windows.Forms.NumericUpDown();
+            this.label2 = new System.Windows.Forms.Label();
+            this.numericRating = new System.Windows.Forms.NumericUpDown();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textPrezzo = new System.Windows.Forms.TextBox();
+            this.tbTitolo = new System.Windows.Forms.TextBox();
+            this.btnAggiungi = new System.Windows.Forms.Button();
+            this.btnRimuovi = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericRating)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericComplex)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericRating)).BeginInit();
             this.SuspendLayout();
             // 
             // lista
@@ -61,7 +63,7 @@ namespace GiochiInScatola
             this.lista.FormattingEnabled = true;
             this.lista.Location = new System.Drawing.Point(0, 24);
             this.lista.Name = "lista";
-            this.lista.Size = new System.Drawing.Size(172, 266);
+            this.lista.Size = new System.Drawing.Size(172, 213);
             this.lista.TabIndex = 0;
             this.lista.SelectedIndexChanged += new System.EventHandler(this.lista_SelectedIndexChanged);
             // 
@@ -88,30 +90,30 @@ namespace GiochiInScatola
             // btnAbout
             // 
             this.btnAbout.Name = "btnAbout";
-            this.btnAbout.Size = new System.Drawing.Size(180, 22);
+            this.btnAbout.Size = new System.Drawing.Size(107, 22);
             this.btnAbout.Text = "About";
             this.btnAbout.Click += new System.EventHandler(this.btnAbout_Click);
             // 
             // fileToolStripMenuItem
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuSalva,
+            this.menuImporta,
             this.menuEsporta});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
             // 
-            // menuSalva
+            // menuImporta
             // 
-            this.menuSalva.Name = "menuSalva";
-            this.menuSalva.Size = new System.Drawing.Size(180, 22);
-            this.menuSalva.Text = "Salva";
-            this.menuSalva.Click += new System.EventHandler(this.menuSalva_Click);
+            this.menuImporta.Name = "menuImporta";
+            this.menuImporta.Size = new System.Drawing.Size(116, 22);
+            this.menuImporta.Text = "Importa";
+            this.menuImporta.Click += new System.EventHandler(this.menuImporta_Click);
             // 
             // menuEsporta
             // 
             this.menuEsporta.Name = "menuEsporta";
-            this.menuEsporta.Size = new System.Drawing.Size(180, 22);
+            this.menuEsporta.Size = new System.Drawing.Size(116, 22);
             this.menuEsporta.Text = "Esporta";
             this.menuEsporta.Click += new System.EventHandler(this.menuEsporta_Click);
             // 
@@ -127,14 +129,14 @@ namespace GiochiInScatola
             // menuCerca
             // 
             this.menuCerca.Name = "menuCerca";
-            this.menuCerca.Size = new System.Drawing.Size(180, 22);
+            this.menuCerca.Size = new System.Drawing.Size(115, 22);
             this.menuCerca.Text = "Cerca";
             this.menuCerca.Click += new System.EventHandler(this.menuCerca_Click);
             // 
             // menuCasuale
             // 
             this.menuCasuale.Name = "menuCasuale";
-            this.menuCasuale.Size = new System.Drawing.Size(180, 22);
+            this.menuCasuale.Size = new System.Drawing.Size(115, 22);
             this.menuCasuale.Text = "Casuale";
             this.menuCasuale.Click += new System.EventHandler(this.menuCasuale_Click);
             // 
@@ -152,26 +154,65 @@ namespace GiochiInScatola
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(172, 24);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(482, 266);
+            this.panel1.Size = new System.Drawing.Size(482, 213);
             this.panel1.TabIndex = 2;
             // 
-            // tbTitolo
+            // checkSquadre
             // 
-            this.tbTitolo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.checkSquadre.AutoSize = true;
+            this.checkSquadre.Location = new System.Drawing.Point(10, 183);
+            this.checkSquadre.Name = "checkSquadre";
+            this.checkSquadre.Size = new System.Drawing.Size(74, 17);
+            this.checkSquadre.TabIndex = 8;
+            this.checkSquadre.Text = "A squadre";
+            this.checkSquadre.UseVisualStyleBackColor = true;
+            this.checkSquadre.Leave += new System.EventHandler(this.updateData);
+            // 
+            // textCategoria
+            // 
+            this.textCategoria.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.tbTitolo.Location = new System.Drawing.Point(6, 3);
-            this.tbTitolo.Name = "tbTitolo";
-            this.tbTitolo.Size = new System.Drawing.Size(342, 20);
-            this.tbTitolo.TabIndex = 0;
+            this.textCategoria.Location = new System.Drawing.Point(262, 144);
+            this.textCategoria.Name = "textCategoria";
+            this.textCategoria.Size = new System.Drawing.Size(148, 20);
+            this.textCategoria.TabIndex = 7;
+            this.textCategoria.Leave += new System.EventHandler(this.updateData);
             // 
-            // textPrezzo
+            // label3
             // 
-            this.textPrezzo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(259, 129);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(52, 13);
+            this.label3.TabIndex = 6;
+            this.label3.Text = "Categoria";
+            // 
+            // numericComplex
+            // 
+            this.numericComplex.Location = new System.Drawing.Point(10, 145);
+            this.numericComplex.Name = "numericComplex";
+            this.numericComplex.Size = new System.Drawing.Size(171, 20);
+            this.numericComplex.TabIndex = 5;
+            this.numericComplex.Leave += new System.EventHandler(this.updateData);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(7, 129);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(89, 13);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Complessità 1/10";
+            // 
+            // numericRating
+            // 
+            this.numericRating.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.textPrezzo.Location = new System.Drawing.Point(7, 30);
-            this.textPrezzo.Name = "textPrezzo";
-            this.textPrezzo.Size = new System.Drawing.Size(172, 20);
-            this.textPrezzo.TabIndex = 1;
+            this.numericRating.Location = new System.Drawing.Point(7, 69);
+            this.numericRating.Name = "numericRating";
+            this.numericRating.Size = new System.Drawing.Size(171, 20);
+            this.numericRating.TabIndex = 3;
+            this.numericRating.Leave += new System.EventHandler(this.updateData);
             // 
             // label1
             // 
@@ -183,77 +224,68 @@ namespace GiochiInScatola
             this.label1.TabIndex = 2;
             this.label1.Text = "€";
             // 
-            // numericRating
+            // textPrezzo
             // 
-            this.numericRating.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.textPrezzo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericRating.Location = new System.Drawing.Point(7, 69);
-            this.numericRating.Name = "numericRating";
-            this.numericRating.Size = new System.Drawing.Size(171, 20);
-            this.numericRating.TabIndex = 3;
+            this.textPrezzo.Location = new System.Drawing.Point(7, 30);
+            this.textPrezzo.Name = "textPrezzo";
+            this.textPrezzo.Size = new System.Drawing.Size(172, 20);
+            this.textPrezzo.TabIndex = 1;
+            this.textPrezzo.Leave += new System.EventHandler(this.updateData);
             // 
-            // label2
+            // tbTitolo
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(7, 129);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(89, 13);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Complessità 1/10";
-            // 
-            // numericComplex
-            // 
-            this.numericComplex.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.tbTitolo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.numericComplex.Location = new System.Drawing.Point(10, 145);
-            this.numericComplex.Name = "numericComplex";
-            this.numericComplex.Size = new System.Drawing.Size(171, 20);
-            this.numericComplex.TabIndex = 5;
+            this.tbTitolo.Location = new System.Drawing.Point(6, 3);
+            this.tbTitolo.Name = "tbTitolo";
+            this.tbTitolo.Size = new System.Drawing.Size(342, 20);
+            this.tbTitolo.TabIndex = 0;
+            this.tbTitolo.Leave += new System.EventHandler(this.updateData);
             // 
-            // label3
+            // btnAggiungi
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(259, 129);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(52, 13);
-            this.label3.TabIndex = 6;
-            this.label3.Text = "Categoria";
+            this.btnAggiungi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnAggiungi.Location = new System.Drawing.Point(0, 214);
+            this.btnAggiungi.Name = "btnAggiungi";
+            this.btnAggiungi.Size = new System.Drawing.Size(75, 23);
+            this.btnAggiungi.TabIndex = 3;
+            this.btnAggiungi.Text = "Aggiungi";
+            this.btnAggiungi.UseVisualStyleBackColor = true;
+            this.btnAggiungi.Click += new System.EventHandler(this.btnAggiungi_Click);
             // 
-            // textCategoria
+            // btnRimuovi
             // 
-            this.textCategoria.Location = new System.Drawing.Point(262, 144);
-            this.textCategoria.Name = "textCategoria";
-            this.textCategoria.Size = new System.Drawing.Size(180, 20);
-            this.textCategoria.TabIndex = 7;
-            // 
-            // checkSquadre
-            // 
-            this.checkSquadre.AutoSize = true;
-            this.checkSquadre.Location = new System.Drawing.Point(10, 183);
-            this.checkSquadre.Name = "checkSquadre";
-            this.checkSquadre.Size = new System.Drawing.Size(74, 17);
-            this.checkSquadre.TabIndex = 8;
-            this.checkSquadre.Text = "A squadre";
-            this.checkSquadre.UseVisualStyleBackColor = true;
+            this.btnRimuovi.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.btnRimuovi.Location = new System.Drawing.Point(97, 214);
+            this.btnRimuovi.Name = "btnRimuovi";
+            this.btnRimuovi.Size = new System.Drawing.Size(75, 23);
+            this.btnRimuovi.TabIndex = 4;
+            this.btnRimuovi.Text = "Rimuovi";
+            this.btnRimuovi.UseVisualStyleBackColor = true;
+            this.btnRimuovi.Click += new System.EventHandler(this.btnRimuovi_Click);
             // 
             // Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(654, 290);
+            this.ClientSize = new System.Drawing.Size(654, 237);
+            this.Controls.Add(this.btnRimuovi);
+            this.Controls.Add(this.btnAggiungi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lista);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.MinimumSize = new System.Drawing.Size(670, 223);
+            this.MinimumSize = new System.Drawing.Size(670, 276);
             this.Name = "Form";
             this.Text = "Giochi in Scatola";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericRating)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericComplex)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericRating)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -266,7 +298,7 @@ namespace GiochiInScatola
         private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem btnAbout;
         private System.Windows.Forms.ToolStripMenuItem fileToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem menuSalva;
+        private System.Windows.Forms.ToolStripMenuItem menuImporta;
         private System.Windows.Forms.ToolStripMenuItem menuEsporta;
         private System.Windows.Forms.ToolStripMenuItem datiToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem menuCerca;
@@ -281,6 +313,8 @@ namespace GiochiInScatola
         private System.Windows.Forms.TextBox textCategoria;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.NumericUpDown numericComplex;
+        private System.Windows.Forms.Button btnAggiungi;
+        private System.Windows.Forms.Button btnRimuovi;
     }
 }
 
