@@ -32,7 +32,7 @@ namespace GiochiInScatola
 
         private void btnAbout_Click(object sender, EventArgs e)
         {
-
+            MessageBox.Show("Title: Giochi Da Tavolo\nAuthor: Nicolò Luigi Allegris", "About");
         }
 
         private void menuImporta_Click(object sender, EventArgs e)
